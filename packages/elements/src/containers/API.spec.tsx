@@ -70,8 +70,8 @@ describe('API', () => {
     const history = createMemoryHistory();
     history.push('/paths/internal-operation/get');
 
-    const { unmount } = render(
-      <Router history={history}>
+    // @ts-ignore
+    const { unmount } = render(<Router history={history as any}>
         <Route path="/">
           <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} />
         </Route>
@@ -87,8 +87,8 @@ describe('API', () => {
     const history = createMemoryHistory();
     history.push('/schemas/InternalObject');
 
-    render(
-      <Router history={history}>
+    // @ts-ignore
+    render(<Router history={history}>
         <Route path="/">
           <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} />
         </Route>
@@ -102,8 +102,8 @@ describe('API', () => {
     const history = createMemoryHistory();
     history.push('/paths/internal-operation/get');
 
-    render(
-      <Router history={history}>
+    // @ts-ignore
+    render(<Router history={history}>
         <Route path="/">
           <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} hideInternal />
         </Route>
@@ -118,8 +118,8 @@ describe('API', () => {
     const history = createMemoryHistory();
     history.push('/schemas/InternalObject');
 
-    render(
-      <Router history={history}>
+    // @ts-ignore
+    render(<Router history={history}>
         <Route path="/">
           <APIWithoutRouter layout="sidebar" apiDescriptionDocument={APIDocument} hideInternal />
         </Route>

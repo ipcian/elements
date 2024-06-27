@@ -12,7 +12,7 @@ import { ExtensionAddonRenderer } from '@stoplight/elements-core/components/Docs
 import { Flex, Heading } from '@stoplight/mosaic';
 import { NodeType } from '@stoplight/types';
 import * as React from 'react';
-import { Link, Redirect, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { ServiceNode } from '../../utils/oas/types';
 import { computeAPITree, findFirstNodeSlug, isInternal } from './utils';
@@ -42,6 +42,7 @@ export const APIWithSidebarLayout: React.FC<SidebarLayoutProps> = ({
   tryItCorsProxy,
   renderExtensionAddon,
 }) => {
+  const navigate = useNavigate();
   const container = React.useRef<HTMLDivElement>(null);
   const tree = React.useMemo(
     () => computeAPITree(serviceNode, { hideSchemas, hideInternal }),
@@ -62,12 +63,14 @@ export const APIWithSidebarLayout: React.FC<SidebarLayoutProps> = ({
     const firstSlug = findFirstNodeSlug(tree);
 
     if (firstSlug) {
-      return <Redirect to={firstSlug} />;
+      navigate(firstSlug);
+      return <></>;
     }
   }
 
   if (hideInternal && node && isInternal(node)) {
-    return <Redirect to="/" />;
+    navigate('/');
+    return <></>;
   }
 
   const sidebar = (
@@ -122,7 +125,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ serviceNode, logo, container, 
         <Heading size={4}>{serviceNode.name}</Heading>
       </Flex>
       <Flex flexGrow flexShrink overflowY="auto" direction="col">
-        <TableOfContents tree={tree} activeId={pathname} Link={Link} onLinkClick={handleTocClick} />
+        <TableOfContents tree={tree} activeId={pathname} Link={Link as any} onLinkClick={handleTocClick} />
       </Flex>
       <PoweredByLink source={serviceNode.name} pathname={pathname} packageType="elements" />
     </>

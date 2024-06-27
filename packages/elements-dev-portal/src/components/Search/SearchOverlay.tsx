@@ -73,7 +73,7 @@ export const SearchOverlay = ({
             <TableOfContents
               tableOfContents={{ ...toc, hide_powered_by: true }}
               activeId={nodeSlug || ''}
-              Link={Link}
+              Link={Link as any}
               onLinkClick={onClick}
             />
           )}

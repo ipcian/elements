@@ -129,7 +129,7 @@ export const Sidebar = ({
         <TableOfContents
           tree={tree}
           activeId={pathname}
-          Link={Link}
+          Link={Link as any}
           onLinkClick={onTocClick}
           isInResponsiveMode={isInResponsiveMode}
         />

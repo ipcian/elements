@@ -63,8 +63,8 @@
     ]
   },
   "dependencies": {
-    "@stoplight/elements-core": "~8.3.3",
-    "@stoplight/http-spec": "^7.1.0",
+    "@stoplight/elements-core": "^8.3.2",
+    "@stoplight/http-spec": "^7.0.3",
     "@stoplight/json": "^3.18.1",
     "@stoplight/mosaic": "^1.53.1",
     "@stoplight/types": "^14.1.1",
@@ -73,7 +73,7 @@
     "file-saver": "^2.0.5",
     "lodash": "^4.17.21",
     "react-query": "^3.34.19",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^6.24.0"
   },
   "devDependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
@@ -90,7 +90,6 @@
     "@types/lodash": "^4.14.181",
     "@types/react": "16.9.56",
     "@types/react-dom": "16.9.12",
-    "@types/react-router-dom": "^5.3.3",
     "enzyme": "3.x.x",
     "enzyme-adapter-react-16": "1.x.x",
     "enzyme-to-json": "3.x.x",

@@ -10,7 +10,7 @@ export const ReactRouterMarkdownLink = ({
   href: _href,
   children,
 }: Omit<LinkProps, 'target' | 'rel'> & { to?: string }) => {
-  const href = to || _href;
+  const href = to || _href || '';
 
   const isExternal = href !== undefined && externalRegex.test(href);
   if (isExternal) {
