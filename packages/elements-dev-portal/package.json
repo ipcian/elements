@@ -1,6 +1,7 @@
 {
   "name": "@ipcian/elements-dev-portal",
   "version": "1.0.1",
+  "private": true,
   "description": "UI components for composing beautiful developer documentation.",
   "keywords": [],
   "sideEffects": [

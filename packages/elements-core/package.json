@@ -1,6 +1,6 @@
 {
   "name": "@ipcian/elements-core",
-  "version": "1.0.1",
+  "version": "1.0.1","private": true,
   "sideEffects": [
     "web-components.min.js",
     "src/web-components/**",
