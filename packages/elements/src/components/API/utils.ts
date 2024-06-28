@@ -4,7 +4,7 @@ import {
   isHttpWebhookOperation,
   TableOfContentsGroup,
   TableOfContentsItem,
-} from '@stoplight/elements-core';
+} from '@ipcian/elements-core';
 import { NodeType } from '@stoplight/types';
 import { defaults } from 'lodash';
 

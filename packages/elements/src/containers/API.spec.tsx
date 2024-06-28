@@ -5,7 +5,7 @@ import {
   withPersistenceBoundary,
   withQueryClientProvider,
   withStyles,
-} from '@stoplight/elements-core';
+} from '@ipcian/elements-core';
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createMemoryHistory } from 'history';

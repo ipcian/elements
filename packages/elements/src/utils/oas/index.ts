@@ -1,4 +1,4 @@
-import { slugify } from '@stoplight/elements-core';
+import { slugify } from '@ipcian/elements-core';
 import {
   Oas2HttpOperationTransformer,
   Oas2HttpServiceTransformer,

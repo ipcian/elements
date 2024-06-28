@@ -6,9 +6,9 @@ import {
   SidebarLayout,
   useRouter,
   withStyles,
-} from '@stoplight/elements-core';
+} from '@ipcian/elements-core';
 import * as React from 'react';
-import {Link, Route, Routes, useParams, useNavigate, Navigate} from 'react-router-dom';
+import { Link, Navigate, Route, Routes, useNavigate, useParams } from 'react-router-dom';
 
 import { BranchSelector } from '../components/BranchSelector';
 import { DevPortalProvider } from '../components/DevPortalProvider';
@@ -67,13 +67,11 @@ export interface StoplightProjectProps extends RoutingProps {
 
   /**
    * URL of a CORS proxy that will be used to send requests in TryIt.
-   * Provided url will be prepended to an URL of an actual request.
+   * Provided url will be prepended to a URL of an actual request.
    * @default false
    */
   tryItCorsProxy?: string;
 }
-
-
 
 const StoplightProjectImpl: React.FC<StoplightProjectProps> = ({
   projectId,
@@ -196,15 +194,15 @@ const StoplightProjectRouter = ({
       <RouterTypeContext.Provider value={router}>
         <Router {...routerProps} key={basePath}>
           <Routes>
-            <Route path="/branches/:branchSlug/:nodeSlug+" >
+            <Route path="/branches/:branchSlug/:nodeSlug+">
               <StoplightProjectImpl {...props} />
             </Route>
 
-            <Route path="/:nodeSlug+" >
+            <Route path="/:nodeSlug+">
               <StoplightProjectImpl {...props} />
             </Route>
 
-            <Route path="/" >
+            <Route path="/">
               <StoplightProjectImpl {...props} />
             </Route>
           </Routes>

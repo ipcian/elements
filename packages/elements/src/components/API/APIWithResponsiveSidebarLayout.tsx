@@ -3,8 +3,8 @@ import {
   ExportButtonProps,
   ParsedDocs,
   ResponsiveSidebarLayout,
-} from '@stoplight/elements-core';
-import { ExtensionAddonRenderer } from '@stoplight/elements-core/components/Docs';
+} from '@ipcian/elements-core';
+import { ExtensionAddonRenderer } from '@ipcian/elements-core/components/Docs';
 import { NodeType } from '@stoplight/types';
 import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';

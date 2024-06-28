@@ -1,5 +1,5 @@
 {
-  "name": "@stoplight/elements-demo",
+  "name": "@ipcian/elements-demo",
   "version": "7.0.1",
   "private": true,
   "scripts": {
@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@stoplight/elements": "^8.1.3",
+    "@ipcian/elements": "^1.0.0",
+    "@ipcian/elements-core": "^1.0.0",
     "@stoplight/mosaic": "^1.53.1",
     "history": "^5.0.0",
     "react": "16.14.0",

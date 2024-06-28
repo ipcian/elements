@@ -1,6 +1,6 @@
-import '@stoplight/elements-core/styles.css';
+import '@ipcian/elements-core/styles.css';
 
-import { API } from '@stoplight/elements';
+import { API } from '@ipcian/elements';
 import { Box } from '@stoplight/mosaic';
 import React, { useContext } from 'react';
 
