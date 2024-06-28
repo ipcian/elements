@@ -1,4 +1,3 @@
-import '@ipcian/elements-core/styles.css';
 
 import { API } from '@ipcian/elements';
 import { Box } from '@stoplight/mosaic';
