@@ -2,7 +2,7 @@
   "name": "@ipcian/elements",
   "version": "1.0.1",
   "description": "UI components for composing beautiful developer documentation.",
-  "keywords": [],"private": true,
+  "keywords": [],
   "sideEffects": [
     "web-components.min.js",
     "src/web-components/**",
